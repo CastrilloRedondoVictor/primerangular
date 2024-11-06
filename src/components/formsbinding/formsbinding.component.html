@@ -4,14 +4,17 @@
 
   <form #userForm="ngForm" (ngSubmit)="getData()">
     <label>Nombre:</label>
-    <input type="text" name="inpNombre" #inpNombre="ngModel" [(ngModel)]="user.name">
+    <input type="text" name="inpNombre" #inpNombre="ngModel" [(ngModel)]="user.name" required>
+    <span *ngIf="!inpNombre.valid && inpNombre.touched" class="error">El nombre es obligatorio</span>
     <label>Apellido:</label>
-    <input type="text" name="inpApellido" #inpNombre="ngModel" [(ngModel)]="user.surname">
+    <input type="text" name="inpApellido" #inpApellido="ngModel" [(ngModel)]="user.surname" required>
+    <span *ngIf="!inpApellido.valid && inpApellido.touched" class="error">El apellido es obligatorio</span>
     <label>Edad:</label>
-    <input type="number" name="inpEdad" #inpNombre="ngModel" [(ngModel)]="user.age">
+    <input type="number" name="inpEdad" #inpEdad="ngModel" [(ngModel)]="user.age" required>
+    <span *ngIf="!inpEdad.valid && inpEdad.touched" class="error">La edad es obligatoria</span>
 
     <br><br>
 
-    <button type="submit">ENVIAR</button>
+    <button type="submit" [disabled]="userForm.invalid">ENVIAR</button>
   </form>
 </div>

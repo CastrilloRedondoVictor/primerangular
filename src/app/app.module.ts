@@ -8,6 +8,9 @@ import { PrimerComponent } from '../components/primercomponent/primer.component'
 import { HooksAngularComponent } from '../components/hooksangular/hooksangular.component';
 import { DeportesComponent } from '../components/deportes/deportes.component';
 import { FormsbindingComponent } from '../components/formsbinding/formsbinding.component';
+import { FormsreferenceComponent } from '../components/formsreference/formsreference.component';
+import { PruebaComponent } from './components/prueba/prueba.component';
+import { TablaMultiplicarComponent } from './components/tabla-multiplicar/tabla-multiplicar.component';
 
 
 @NgModule({
@@ -16,7 +19,10 @@ import { FormsbindingComponent } from '../components/formsbinding/formsbinding.c
     PrimerComponent,
     HooksAngularComponent,
     DeportesComponent,
-    FormsbindingComponent
+    FormsbindingComponent,
+    FormsreferenceComponent,
+    PruebaComponent,
+    TablaMultiplicarComponent
   ],
   imports: [
     BrowserModule,

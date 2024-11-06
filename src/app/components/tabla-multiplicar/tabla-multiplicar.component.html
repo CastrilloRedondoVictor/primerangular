@@ -1,0 +1,14 @@
+<div>
+  <h1>Tabla multiplicar</h1>
+  <h2 *ngIf="numero">Tabla del número {{ numero }}</h2>
+  <form #formNumero="ngForm" (ngSubmit)="submitForm()">
+    <label>Número:</label>
+    <input type="number" name="inpNum" #inpNum required>
+    <button type="submit"  [disabled]="formNumero.invalid">CALCULAR</button>
+  </form>
+  <ul *ngIf="resultados.length > 0">
+    <li  *ngFor="let resultado of resultados; let i = index">
+      {{ numero }} * {{ i }} = {{ resultados[i] }}
+    </li>
+  </ul>
+</div>
