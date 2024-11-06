@@ -1,0 +1,20 @@
+<div>
+  <h1>DEPORTES</h1>
+  <div *ngIf="deportes.length <= 2; else deportesCorto">
+    <h3>Hay 2 o menos deportes</h3>
+  </div>
+  <ng-template #deportesCorto>
+    <h3>Hay mas de 2 deportes</h3>
+  </ng-template>
+
+  <h2><span class="fav">{{favorito}}</span></h2>
+  <div *ngFor="let deporte of deportes">
+    <h3>{{deporte}}</h3>
+    <button (click)="setFavorito(deporte)">setFavorito</button>
+  </div>
+
+
+  <ul>
+    <li *ngFor="let numero of numeros"> <h3 [ngClass]="numero % 2 == 0 ? 'par' : 'impar'">{{numero}}</h3></li>
+  </ul>
+</div>

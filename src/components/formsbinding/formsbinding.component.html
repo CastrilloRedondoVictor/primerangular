@@ -1,0 +1,17 @@
+<div>
+  <h1>Forms binding</h1>
+  <h2>{{ mensaje }}</h2>
+
+  <form #userForm="ngForm" (ngSubmit)="getData()">
+    <label>Nombre:</label>
+    <input type="text" name="inpNombre" #inpNombre="ngModel" [(ngModel)]="user.name">
+    <label>Apellido:</label>
+    <input type="text" name="inpApellido" #inpNombre="ngModel" [(ngModel)]="user.surname">
+    <label>Edad:</label>
+    <input type="number" name="inpEdad" #inpNombre="ngModel" [(ngModel)]="user.age">
+
+    <br><br>
+
+    <button type="submit">ENVIAR</button>
+  </form>
+</div>

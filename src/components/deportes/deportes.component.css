@@ -1,0 +1,13 @@
+.fav {
+  background-color: rgba(218, 165, 32, 0.548);
+}
+
+li{
+  list-style: none;
+}
+.par {
+  color: green;
+}
+.impar {
+  color: red;
+}
