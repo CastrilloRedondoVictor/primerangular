@@ -6,7 +6,7 @@
     <input type="number" name="inpNum" #inpNum required>
     <button type="submit"  [disabled]="formNumero.invalid">CALCULAR</button>
   </form>
-  <ul *ngIf="resultados.length > 0">
+  <ul *ngIf="resultados.length > 0 && numero">
     <li  *ngFor="let resultado of resultados; let i = index">
       {{ numero }} * {{ i }} = {{ resultados[i] }}
     </li>
